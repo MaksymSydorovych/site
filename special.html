@@ -6,7 +6,7 @@
     <meta name="description"
         content="Community Science Museum. An interactive museum for kids and parents. Special events and exhibitions">
     <title>Community Science Museum</title>
-    <link rel="stylesheet" type="text/css" href="../style/style.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital@1&family=Piazzolla:ital,wght@1,800&family=Trispace&display=swap" rel="stylesheet">
@@ -25,6 +25,22 @@
   </head>
   <body>
     <div class="container_home">
+      <div class="burger">
+        
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+      <ul class="menu>">
+        <li><a  id="active" href="index.html">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="special.html">Special Events & Exhibitions</a></li>
+        <li><a href="exhibition.html">Exhibition Spaces</a></li>
+        <li><a href="involved.html">Get Involved</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a  href="orders.html">Order</a></li>
+        <li><a  href="contact.html">Contact</a></li>
+
+      </ul>
+    </div>
       <div id="nav">
         <nav>
           <ul>
@@ -36,6 +52,7 @@
             <li><a href="involved.html">Get Involved</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="orders.html">Order</a></li>
+            <li><a  href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -51,10 +68,10 @@
       <article>
         <h1>Special events and Exhibitions</h1>
         <h2>Night in the Museum</h2>
-        <img class="special_img" src="../images/rex.jpg" alt="tyronusaur's skelet" />
+        <img class="special_img" src="images/rex.jpg" alt="tyronusaur's skelet" />
         
       <p>Get your family together for an exciting night in the museum as you sleep over beside dinosaurs and science displays. Bring your own sleeping bag and get ready to rough it as we go exploring the wonders of science.</p>
-      <img class="special2_img" src="../images/vr.jpg" alt="kid in vr glasses" />
+      <img class="special2_img" src="images/vr.jpg" alt="kid in vr glasses" />
       <h2>Visiting Professor of Aeronautics</h2>
         <p>It is our pleasure to announce that Prof Sheila Widnall from the Massachusetts Institute of Technology will be delivering 3 lectures on the development of aeronautics and where the future lies in this exciting ‘space’.</p>
         <h2>Energetica Exhibition on Loan</h2>
@@ -77,9 +94,9 @@
     </div>
     <div class="follow">
       <p>Follow Us</p>
-      <a class="social" href="#"><img src="../images/social1.jpg" /></a>
-        <a class="social" href="#"><img src="../images/social2.jpg" /></a>
-        <a class="social" href="#"><img src="../images/social3.jpg" /></a>
+      <a class="social" href="#"><img src="images/social1.jpg" /></a>
+        <a class="social" href="#"><img src="images/social2.jpg" /></a>
+        <a class="social" href="#"><img src="images/social3.jpg" /></a>
         
     </div>
     <div class="adress">
@@ -92,5 +109,6 @@
         </div>
       </footer>
     </div>
+    <script src="script/script.js"></script>
   </body>
 </html>

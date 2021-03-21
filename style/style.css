@@ -10,13 +10,13 @@ ul {
 }
 
 body {
-  background-color: rgb(29, 27, 27);
+  background-color: rgb(25, 17, 53);
 }
 h1,
 h2,
 h3,
 h4 {
-  color: rgb(252, 252, 56);
+  color: rgb(243, 243, 207);
 }
 h1,
 h2,
@@ -26,17 +26,17 @@ h4 {
 }
 p {
   font-family: "Trispace", sans-serif;
-  color: rgb(247, 247, 93);
+  color: rgb(243, 243, 207);
 }
 /*---------------------NAV--------------------------------*/
 #nav {
   float: right;
-  background-color: rgb(27, 27, 27);
+  background-color: rgb(25, 17, 53);
   margin: 0, 5% 2% 0px 0px;
   width: 100%;
 }
 #active {
-  background-color: rgb(75, 72, 72);
+  background-color: rgb(114, 74, 179);
 }
 #nav ul li {
   display: inline-block;
@@ -48,7 +48,10 @@ p {
   font-size: 2em;
 }
 #nav a:hover {
-  background-color: rgb(75, 72, 72);
+  background-color: rgb(69, 49, 110);
+}
+.burger {
+  opacity: 0;
 }
 
 /*--------------------------------------Header---------------------------*/
@@ -109,8 +112,64 @@ p {
   padding-left: 22%;
   font-size: 350%;
   font-weight: bold;
-  color: rgb(245, 245, 47);
+  color: rgb(243, 243, 207);
   text-shadow: 3px 3px 3px black;
+}
+
+/*-------------------------------form---------------------------------------*/
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 2em auto 1em auto;
+  padding: 1em;
+  background: white;
+  border-radius: 1em;
+  width: 70%;
+}
+#name,
+#tlf,
+#email {
+  width: 35%;
+  margin: 0.5em;
+}
+
+button:disabled {
+  background: lightgray;
+}
+input {
+  width: 100%;
+  border: 0.2 5em solid black;
+  font-size: 1em;
+  font-family: "Trispace", sans-serif;
+  font-weight: 500;
+  float: right;
+  justify-content: center;
+}
+button {
+  background: rgb(25, 17, 53);
+  border: none;
+  width: 15%;
+  padding: 1em;
+  color: white;
+  margin-top: 1em;
+  cursor: pointer;
+  border-radius: 1em;
+  margin-left: 2em;
+}
+.comfirm {
+  font-size: 10em;
+}
+.comfirm {
+  width: 20%;
+  background: green;
+  color: white;
+  border-radius: 1em;
+  padding: 0.1em;
+  margin-left: 2.5em;
+  margin-top: 0.2em;
+}
+.comfirm p {
+  font-size: 0.1em;
 }
 /*------------------------------------main---------------------------------*/
 h1,
@@ -215,6 +274,7 @@ footer {
   margin: 12% 0px 0px 0px;
   padding-left: 35%;
 }
+
 /*------------------------------------------------laptop------------------------------------------*/
 @media only screen and (max-width: 1395px) {
   #nav a {
@@ -270,12 +330,15 @@ footer {
     font-size: 0.7em;
     margin: 0px 0px 1% 0px;
   }
+  .comfirm {
+    margin-left: 1.8em;
+  }
 }
 /*------------------------------------------------tablet--------------------------------------------*/
-@media only screen and (max-width: 864px) {
+@media only screen and (max-width: 768px) {
   #nav {
     width: 100%;
-    position: sticky;
+
     top: 0;
   }
   #nav a {
@@ -331,18 +394,13 @@ footer {
     font-size: 0.7em;
     margin: 0px 0px 1% 0px;
   }
+  .comfirm {
+    width: 30%;
+    margin-left: 1.4em;
+  }
 }
 /*------------------------------------mobile---------------------------*/
-@media only screen and (max-width: 425px) {
-  #nav {
-    width: 100%;
-    position: sticky;
-    top: 0;
-  }
-  #nav a {
-    font-size: 0.55em;
-  }
-
+@media only screen and (max-width: 481px) {
   .background_home {
     height: 250px;
   }
@@ -378,7 +436,7 @@ footer {
   }
 
   footer {
-    height: 2500px;
+    height: 250px;
   }
   .home_link_block h2,
   p {
@@ -422,5 +480,110 @@ footer {
   }
   .researches_img {
     width: 100%;
+  }
+  .comfirm {
+    width: 40%;
+  }
+  #nav {
+    display: none;
+  }
+  a {
+    color: white;
+  }
+  .burger {
+    background-color: rgb(42, 22, 75);
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    opacity: 100;
+  }
+  .burger ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: rgb(32, 10, 66);
+  }
+
+  .burger li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 2px solid #f4f4f4;
+    text-decoration: none;
+  }
+
+  .burger li a:hover,
+  .burger .menu-btn:hover {
+    background-color: rgb(71, 37, 126);
+  }
+
+  /* menu */
+
+  .burger .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .burger .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+
+  .burger .menu-icon .navicon {
+    background: rgb(255, 253, 253);
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: 0.2s ease-out;
+    width: 18px;
+  }
+
+  .burger .menu-icon .navicon:before,
+  .burger .menu-icon .navicon:after {
+    background: rgb(252, 249, 249);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+
+  .burger .menu-icon .navicon:before {
+    top: 5px;
+  }
+
+  .burger .menu-icon .navicon:after {
+    top: -5px;
+  }
+
+  .burger .menu-btn {
+    display: none;
+  }
+
+  .burger .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+
+  .burger .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+
+  .burger .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+
+  .burger .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+
+  .burger .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .burger .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
   }
 }
