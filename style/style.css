@@ -17,6 +17,7 @@ h2,
 h3,
 h4 {
   color: rgb(243, 243, 207);
+  text-shadow: 2px 2px 2px rgb(80, 34, 133);
 }
 h1,
 h2,
@@ -46,6 +47,7 @@ p {
   text-decoration: none;
   color: rgb(194, 184, 184);
   font-size: 2em;
+  margin-bottom: 2em;
 }
 #nav a:hover {
   background-color: rgb(69, 49, 110);
@@ -171,6 +173,7 @@ button {
 .comfirm p {
   font-size: 0.1em;
 }
+
 /*------------------------------------main---------------------------------*/
 h1,
 h2 {
@@ -243,7 +246,9 @@ p {
   padding: 1% 1% 0px 1%;
 }
 .home_link_block:hover {
-  background-color: rgb(75, 72, 72);
+  background-color: rgb(114, 74, 179);
+  transform: rotate(5deg);
+  transition: 1s;
 }
 .hours {
   text-align: center;
@@ -341,6 +346,7 @@ footer {
 
     top: 0;
   }
+
   #nav a {
     font-size: 1.2em;
   }
@@ -443,7 +449,11 @@ footer {
     font-size: 1.1em;
     padding: 1% 1% 0px 1%;
   }
-
+  .home_link_block:hover {
+    background-color: rgb(114, 74, 179);
+    transform: none;
+    transition: 1s;
+  }
   .hours {
     font-size: 1.4em;
   }
@@ -507,7 +517,7 @@ footer {
 
   .burger li a {
     display: block;
-    padding: 20px 20px;
+    padding: 12px 12px;
     border-right: 2px solid #f4f4f4;
     text-decoration: none;
   }
@@ -516,8 +526,6 @@ footer {
   .burger .menu-btn:hover {
     background-color: rgb(71, 37, 126);
   }
-
-  /* menu */
 
   .burger .menu {
     clear: both;
@@ -567,7 +575,7 @@ footer {
   }
 
   .burger .menu-btn:checked ~ .menu {
-    max-height: 240px;
+    max-height: 200px;
   }
 
   .burger .menu-btn:checked ~ .menu-icon .navicon {
@@ -586,4 +594,25 @@ footer {
   .burger .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
   }
+}
+.ex-items {
+  margin-top: 1em;
+}
+.ex-item-image {
+  width: 50px;
+  height: 50px;
+}
+.ex-item-price,
+.ex-item-title {
+  color: white;
+}
+.order-form {
+  margin-left: 40%;
+}
+.cart-item,
+.cart-price,
+.cart-quantity {
+  color: white;
+  display: flex;
+  flex-direction: column;
 }
