@@ -29,7 +29,7 @@
         
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-      <ul class="menu>">
+      <ul class="menu>" id="menu">
         <li><a  id="active" href="index.html">Home</a></li>
         <li><a href="explore.html">Explore</a></li>
         <li><a href="special.html">Special Events & Exhibitions</a></li>
@@ -70,13 +70,15 @@
                 <label>
                     User name :  
                     <input name="name" id="name" />
+                    <div class="form-error" id="nameError">name- required</div>
                 </label>
             </div>
 
             <div>
                 <label>
-                    tlf : 
+                    telefon : 
                     <input name="tlf" id="tlf" />
+                    <div class="form-error" id="telefonError">telefon - required</div>
                 </label>
             </div>
 
@@ -84,6 +86,7 @@
                 <label>
                     Email :  (required)
                     <input name="email" id="email" />
+                    <div class="form-error" id="emailError">e-mail - required</div>
                 </label>
             </div>
             <div>
@@ -130,5 +133,6 @@
       </footer>
     </div>
     <script src="script/script.js"></script>
+    <script src="script/js.js"></script>
   </body>
 </html>

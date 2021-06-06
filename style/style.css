@@ -8,7 +8,12 @@ a {
 ul {
   list-style-type: none;
 }
-
+#menu {
+  display: none;
+}
+.show {
+  display: block;
+}
 body {
   background-color: rgb(25, 17, 53);
 }
@@ -128,13 +133,18 @@ form {
   border-radius: 1em;
   width: 70%;
 }
+label {
+  margin: 1%;
+}
 #name,
 #tlf,
 #email {
   width: 35%;
   margin: 0.5em;
 }
-
+#meesage {
+  margin-bottom: 2%;
+}
 button:disabled {
   background: lightgray;
 }
@@ -173,7 +183,9 @@ button {
 .comfirm p {
   font-size: 0.1em;
 }
-
+.form-error {
+  color: rgb(247, 110, 110);
+}
 /*------------------------------------main---------------------------------*/
 h1,
 h2 {
@@ -242,7 +254,7 @@ footer {
 }
 .home_link_block h2,
 p {
-  font-size: 2em;
+  font-size: 1.2em;
   padding: 1% 1% 0px 1%;
 }
 .home_link_block:hover {
@@ -341,16 +353,9 @@ footer {
 }
 /*------------------------------------------------tablet--------------------------------------------*/
 @media only screen and (max-width: 768px) {
-  #nav {
-    width: 100%;
-
-    top: 0;
+  nav {
+    display: flex;
   }
-
-  #nav a {
-    font-size: 1.2em;
-  }
-
   .background_home {
     height: 350px;
   }
@@ -494,11 +499,12 @@ footer {
   .comfirm {
     width: 40%;
   }
-  #nav {
-    display: none;
-  }
+
   a {
     color: white;
+  }
+  .nav {
+    display: none;
   }
   .burger {
     background-color: rgb(42, 22, 75);
@@ -507,6 +513,7 @@ footer {
     width: 100%;
     opacity: 100;
   }
+
   .burger ul {
     margin: 0;
     padding: 0;
@@ -530,16 +537,14 @@ footer {
   .burger .menu {
     clear: both;
     max-height: 0;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.4s ease-out;
   }
 
   .burger .menu-icon {
     cursor: pointer;
     display: inline-block;
-    float: right;
     padding: 28px 20px;
     position: relative;
-    user-select: none;
   }
 
   .burger .menu-icon .navicon {
@@ -547,7 +552,7 @@ footer {
     display: block;
     height: 2px;
     position: relative;
-    transition: 0.2s ease-out;
+    transition: 0.4s ease-out;
     width: 18px;
   }
 
@@ -594,25 +599,10 @@ footer {
   .burger .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
   }
-}
-.ex-items {
-  margin-top: 1em;
-}
-.ex-item-image {
-  width: 50px;
-  height: 50px;
-}
-.ex-item-price,
-.ex-item-title {
-  color: white;
-}
-.order-form {
-  margin-left: 40%;
-}
-.cart-item,
-.cart-price,
-.cart-quantity {
-  color: white;
-  display: flex;
-  flex-direction: column;
+  .show {
+    max-height: 100em;
+  }
+  button {
+    width: 50%;
+  }
 }
